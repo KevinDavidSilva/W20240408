@@ -72,5 +72,11 @@ namespace W20240408.AccesoADatos
             }
             return await query.ToListAsync();
         }
+
+        public Task<int> Crear(PersonaW personaW)
+        {
+            _appDbContext.Add(personaW);
+            return await _appDbContext.SaveChangesAsync();
+        }
     }
 }
