@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W20240408.AccesoADatos", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W20240408.LogicaDeNegocio", "W20240408.LogicaDeNegocio\W20240408.LogicaDeNegocio.csproj", "{319EF6B8-468E-4D8E-B24B-F050D6196D3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W20240408.UI.AppWebMVC", "W20240408.UI.AppWebMVC\W20240408.UI.AppWebMVC.csproj", "{DB43F21E-5B3B-4463-A0EC-C27D02C4F095}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{319EF6B8-468E-4D8E-B24B-F050D6196D3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{319EF6B8-468E-4D8E-B24B-F050D6196D3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{319EF6B8-468E-4D8E-B24B-F050D6196D3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB43F21E-5B3B-4463-A0EC-C27D02C4F095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB43F21E-5B3B-4463-A0EC-C27D02C4F095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB43F21E-5B3B-4463-A0EC-C27D02C4F095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB43F21E-5B3B-4463-A0EC-C27D02C4F095}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
