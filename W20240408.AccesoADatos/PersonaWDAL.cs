@@ -24,15 +24,15 @@ namespace W20240408.AccesoADatos
         public async Task<int> Modificar(PersonaW personaW)
         {
             var personawdal = await
-            _appDbContext.Clientes.FirstOrDefaultAsync(s => s.Id == personaW.Id);
+            _appDbContext.Clientes.FirstOrDefaultAsync(s=> s.Id == personaW.Id);
             if (personawdal != null)
             {
-                personawdal.NombreW = personawdal.NombreW;
-                personawdal.ApellidoW = personawdal.ApellidoW;
-                personawdal.FechaNacimientoW = personawdal.FechaNacimientoW;
-                personawdal.SueldoW = personawdal.SueldoW;
-                personawdal.EstatusW = personawdal.EstatusW;
-                personawdal.ComentarioW = personawdal.ComentarioW;
+                personawdal.NombreW = personaW.NombreW;
+                personawdal.ApellidoW = personaW.ApellidoW;
+                personawdal.FechaNacimientoW = personaW.FechaNacimientoW;
+                personawdal.SueldoW = personaW.SueldoW;
+                personawdal.EstatusW = personaW.EstatusW;
+                personawdal.ComentarioW = personaW.ComentarioW;
                 _appDbContext.Update(personawdal);
             }
             return await _appDbContext.SaveChangesAsync();
