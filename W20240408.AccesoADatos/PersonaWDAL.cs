@@ -29,8 +29,7 @@ namespace W20240408.AccesoADatos
             {
                 personawdal.NombreW = personawdal.NombreW;
                 personawdal.ApellidoW = personawdal.ApellidoW;
-                personawdal.FechaNacimientoW =
-                personawdal.FechaNacimientoW;
+                personawdal.FechaNacimientoW = personawdal.FechaNacimientoW;
                 personawdal.SueldoW = personawdal.SueldoW;
                 personawdal.EstatusW = personawdal.EstatusW;
                 personawdal.ComentarioW = personawdal.ComentarioW;

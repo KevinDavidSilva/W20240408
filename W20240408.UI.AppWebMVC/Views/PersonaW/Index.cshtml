@@ -6,9 +6,29 @@
 
 <h1>Persona</h1>
 
-<p>
-    <a asp-action="Create">Nueva persona</a>
-</p>
+<h2>Buscar</h2>
+<form asp-action="Index">
+    <div class="row">
+        <div class="form-group col-md-5">
+            <label class="control-label">Nombre</label>
+            <input type="text" name="nombrew" class="form-control" />
+
+        </div>
+        <div class="form-group col-md-5">
+            <label class="control-label">Apellido</label>
+            <input type="text" name="apellidow" class="form-control" />
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-12">
+            <input type="submit" value="Buscar" class="btn btn-primary" />|
+            <a class="btn btn-outline-primary" asp-action="Create">Crear Nueva persona</a>
+        </div>
+    </div>
+</form>
+
+
 <table class="table">
     <thead>
         <tr>
