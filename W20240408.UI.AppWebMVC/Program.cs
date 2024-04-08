@@ -1,8 +1,8 @@
 using W20240408.LogicaDeNegocio;
 var builder = WebApplication.CreateBuilder(args);
 
-//builder.Services.AddBLDependecies(builder.Configuration);
-//builder.Services.AddControllersWithViews();
+builder.Services.AddBLDependecies(builder.Configuration);
+builder.Services.AddControllersWithViews();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

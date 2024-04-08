@@ -29,6 +29,7 @@ namespace W20240408.EntidadesDeNegocio
         [Display(Name = "Estatus")]
         public byte  EstatusW { get; set; }
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
+        [Display(Name = "Comentario")]
         public string ComentarioW { get; set; }
     }
 }

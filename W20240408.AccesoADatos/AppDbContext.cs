@@ -11,6 +11,6 @@ namespace W20240408.AccesoADatos
     public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-        public DbSet<PersonaW> personaW { get; set; }
+        public DbSet<PersonaW> Clientes { get; set; }
     }
 }

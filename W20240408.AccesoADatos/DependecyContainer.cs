@@ -15,7 +15,7 @@ namespace W20240408.AccesoADatos
         {
             services.AddDbContext<AppDbContext>(options =>
              options.UseSqlServer(configuration.GetConnectionString("Cnn")));
-            services.AddScoped<>();
+            services.AddScoped<PersonaWDAL>();
 
             return services;
         }

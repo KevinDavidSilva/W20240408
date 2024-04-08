@@ -16,7 +16,7 @@ namespace W20240408.AccesoADatos
             _appDbContext = appDbContext;
         }
 
-        public async Task<int> Crear(PersonaWDAL personaW)
+        public async Task<int> Crear(PersonaW personaW)
         {
             _appDbContext.Add(personaW);
             return await _appDbContext.SaveChangesAsync();
@@ -24,7 +24,7 @@ namespace W20240408.AccesoADatos
         public async Task<int> Modificar(PersonaW personaW)
         {
             var personawdal = await
-            _appDbContext.personaW.FirstOrDefaultAsync(s => s.Id == personaW.Id);
+            _appDbContext.Clientes.FirstOrDefaultAsync(s => s.Id == personaW.Id);
             if (personawdal != null)
             {
                 personawdal.NombreW = personawdal.NombreW;
@@ -42,14 +42,14 @@ namespace W20240408.AccesoADatos
         public async Task<int> Eliminar(PersonaW personaW)
         {
             var personawdal = await
-            _appDbContext.personaW.FirstOrDefaultAsync(s => s.Id == personaW.Id);
+            _appDbContext.Clientes.FirstOrDefaultAsync(s => s.Id == personaW.Id);
             if (personawdal != null)
                 _appDbContext.Remove(personawdal);
             return await _appDbContext.SaveChangesAsync();
         }
         public async Task<PersonaW> ObtenerPorId(PersonaW personaW)
         {
-            var clienteData = await _appDbContext.personaW.FirstOrDefaultAsync(s => s.Id == personaW.Id);
+            var clienteData = await _appDbContext.Clientes.FirstOrDefaultAsync(s => s.Id == personaW.Id);
             if (clienteData != null)
                 return clienteData;
             else
@@ -57,26 +57,22 @@ namespace W20240408.AccesoADatos
         }
         public async Task<List<PersonaW>> ObtenerTodos()
         {
-            return await _appDbContext.personaW.ToListAsync();
+            return await _appDbContext.Clientes.ToListAsync();
         }
-        public async Task<List<PersonaW>> Buscar(PersonaW personaW)
+        public async Task<List<PersonaW>> Buscar(PersonaW personaw)
         {
-            var query = _appDbContext.personaW.AsQueryable();
-            if (!string.IsNullOrWhiteSpace(personaW.NombreW))
+            var query = _appDbContext.Clientes.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(personaw.NombreW))
             {
-                query = query.Where(s => s.NombreW.Contains(personaW.NombreW));
+                query = query.Where(s => s.NombreW.Contains(personaw.NombreW));
             }
-            if (!string.IsNullOrWhiteSpace(personaW.ApellidoW))
+            if (!string.IsNullOrWhiteSpace(personaw.ApellidoW))
             {
-                query = query.Where(s => s.ApellidoW.Contains(personaW.ApellidoW));
+                query = query.Where(s => s.ApellidoW.Contains(personaw.ApellidoW));
             }
             return await query.ToListAsync();
         }
 
-        public Task<int> Crear(PersonaW personaW)
-        {
-            _appDbContext.Add(personaW);
-            return await _appDbContext.SaveChangesAsync();
-        }
+        
     }
 }
